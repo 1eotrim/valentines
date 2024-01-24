@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./style/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1 class="header_text">Will you be my valentine's date? &#9829 </h1>
+        </div>
+        <div class="gif_container">
+            <img id="valentineImage" src="https://cdn.7tv.app/emote/643c96089137f98b004c8d5f/3x.webp" alt="Cute animated illustration">
+        </div>
+        <div class="buttons">
+            <button class="btn" id="yesButton" onclick="nextPage()">Yes</button>
+            <button class="btn" id="noButton" onmouseover="moveButton()">No</button>
+            <script>
+                function nextPage() {
+                    window.location.href = "yes.html";
+                }
+
+                function moveButton() {
+                    var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
+                    var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
+                    document.getElementById('noButton').style.left = `${x}px`;
+                    document.getElementById('noButton').style.top = `${y}px`;
+
+                    // Change the image source
+                    document.getElementById('valentineImage').src = "https://preview.redd.it/xt8fx6fc3up61.jpg?auto=webp&s=bbe4ca5e4838bd3f44763af2ab14d94a4875134e"; // Replace with the new image URL
+                }
+            </script>
+        </div>
+    </div>
+</body>
+</html>
